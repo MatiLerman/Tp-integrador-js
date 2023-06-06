@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comprar Tickets</title>
+  <link rel="stylesheet" type="text/css" href="reserva.css">
+</head>
+<body>
+  <header>
+    <h1>Comprar Tickets</h1>
+  </header>
+
+  <main>
+    <section class="ticket-section">
+      <h2>Selecciona tu ticket</h2>
+      <div class="ticket-card">
+        <h3>Estudiante</h3>
+        <p>Tiene un descuento
+
+            80%
+            
+            * presntar documentación.</p>
+        <button>Comprar</button>
+      </div>
+      <div class="ticket-card">
+        <h3>Trainee</h3>
+        <p>Tiene un descuento
+
+            50%
+            
+            * presntar documentación.</p>
+        <button>Comprar</button>
+      </div>
+      <div class="ticket-card">
+        <h3>Junior</h3>
+        <p>Tiene un descuento
+
+            15%
+            
+            * presntar documentación.</p>
+        <button>Comprar</button>
+      </div>
+      <!-- Agrega más tarjetas de ticket según sea necesario -->
+    </section>
+
+    <section class="contact-section">
+        <form target="_self" method="dialog" action="Destino.html" onsubmit="calcularTotal()"> 
+      <h2>Información de contacto</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Cantidad</label>
+          <input type="number" id="cantidad" name="cantidad" required min="1">
+        </div>
+        <div class="form-group">
+            <label for="Categoria" id="Categoria">Categoria:</label>
+            <select>
+                <option value="1">Estudiante</option>
+                <option value="2">Trainee</option>
+                <option value="3">Junior</option>
+            </select required>
+        </div>
+        <button type="submit" onsubmit="calcularTotal()">Enviar </button>
+      </form>
+    </section>
+
+    <script src="parcial.js"></script>
+  </main>
+
+  <footer>
+    <p>Derechos de autor &copy; 2023 Comprar Tickets</p>
+  </footer>
+</body>
+</html>
